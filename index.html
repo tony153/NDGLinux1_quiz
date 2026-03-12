@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NDG Linux Exam Hub</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="card" role="main">
+    <header>
+      <h1 style="margin:0 0 6px;">Linux 1 — 試題總覽</h1>
+      <p class="progress-info">選擇你要練習或檢視的測驗頁面</p>
+    </header>
+
+    <section class="options-grid" aria-label="Exam links">
+      <button class="option-btn" id="btn-final15-26" type="button" aria-controls="link">Final Exam (Ch15-26)</button>
+      <button class="option-btn" id="btn-final-comprehensive" type="button">Final Comprehensive Exam (Ch1-26)</button>
+    </section>
+
+    <button class="primary-btn submit-btn" id="open-btn" type="button">前往選取的測驗</button>
+
+    <!-- <div style="margin-top:18px; font-size:0.95rem; color:#666; text-align:left">
+      <strong>快速連結：</strong>
+      <ul style="padding-left:18px; margin:8px 0">
+        <li><a href="./FinalExam_Ch15-26.html">FinalExam_Ch15-26.html</a></li>
+        <li><a href="./FinalComprehensiveExam_ch1-26.html">FinalComprehensiveExam_ch1-26.html</a></li>
+      </ul>
+    </div> -->
+
+    <footer style="margin-top:14px; color:#999; font-size:0.85rem">Linux 1 Quiz</footer>
+  </main>
+
+  <script>
+    // Simple interaction to select then navigate to the chosen exam
+    const btnA = document.getElementById('btn-final15-26');
+    const btnB = document.getElementById('btn-final-comprehensive');
+    const openBtn = document.getElementById('open-btn');
+    let selected = null;
+
+    function clearSelected() {
+      [btnA, btnB].forEach(b => b.classList.remove('selected'));
+    }
+
+    btnA.addEventListener('click', () => {
+      clearSelected();
+      btnA.classList.add('selected');
+      selected = './FinalExam_Ch15-26.html';
+    });
+
+    btnB.addEventListener('click', () => {
+      clearSelected();
+      btnB.classList.add('selected');
+      selected = './FinalComprehensiveExam_ch1-26.html';
+    });
+
+    openBtn.addEventListener('click', () => {
+      if (!selected) {
+        // shake card to indicate error
+        const card = document.querySelector('.card');
+        card.classList.add('shake');
+        setTimeout(() => card.classList.remove('shake'), 420);
+        return;
+      }
+      // navigate
+      window.location.href = selected;
+    });
+
+    // Allow keyboard activation (Enter) when focused on option buttons
+    [btnA, btnB].forEach(b => b.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        b.click();
+      }
+    }));
+  </script>
+</body>
+</html>

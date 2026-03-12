@@ -1,0 +1,278 @@
+1. The same set of services are started or stopped at different runlevels.​ True or False?	
+TRUE	
+FALSE	(Ans)
+2. Which command will display both the current runlevel and the previous runlevel?	
+level	
+run	
+rl	
+runlevel	(Ans)
+3. Which directories exist in the /etc/rc.d directory?	
+rc0, rc1, rc2, rc3, rc4, rc5 and rc6	
+rc0.d, rc2.d, rc4.d, and rc6.d	
+rc0d, rc1d, rc2d, rc3d, rc4d and rc5d	
+rc0.d, rc1.d, rc2.d, rc3.d, rc4.d, rc5.d and rc6.d	(Ans)
+4. Which of the following can be used to restart the HTTP service?	
+(choose two)	
+service https restart	
+service start httpd	
+/etc/init.d/httpd restart	(Ans)
+service httpd restart	(Ans)
+5. A device name of /dev/hda1 indicates this partition is on which type of device?	
+IDE	(Ans)
+SATA	
+CDROM	
+Logical Volume	
+6. In what directory are you most likely to find user’s home directories?	
+home	(Ans)
+/user/third	
+/var/lib	
+/usr/local	
+7. Virtual memory is also referred to as:	
+Swap memory	(Ans)
+Soft memory	
+Test memory	
+Hard memory	
+Which directory structure contains the bulk of the operating system’s files:	
+/root	
+/usr	(Ans)
+/rootfs	
+/home	
+9. After running fdisk -cu /dev/sdb, what fdisk command will allow you to change a partition type?	
+t	(Ans)
+d	
+f	
+g	
+10. After running fdisk -cu /dev/sdb, what fdisk command will allow you to create a new partition?	
+w	
+n	(Ans)
+g	
+c	
+11. To activate a swap space that has been initialized, you can execute:	
+swapctl	
+swapcontrol	
+swapoff	
+swapon	(Ans)
+A mount point is:	
+A partition	
+An empty directory that is used to access a filesystem	(Ans)
+A device name that is used for mounting	
+A way to specify mount options	
+13. The first field in the /etc/fstab file is used to specify:	
+The dump field	
+The fsck order	
+The mount options	
+The device to mount	(Ans)
+The mount point	
+The filesystem type	
+14. What commands can display a list of mounted file systems?(choose two)	
+lspt	
+mount	(Ans)
+df	(Ans)
+fdisk	
+15. By default, the df command displays filesystem use in:	
+1-M block size	
+1-K block size	(Ans)
+1-T block size	
+1-G block size	
+16. Inodes are used to store a file’s:	
+Metadata	(Ans)
+Name	
+Location	
+Contents	
+17. The _____ command will display how much space a directory is using.	
+init	
+df	
+dir	
+du	(Ans)
+18. Which of the following commands will shut down the system?	
+init 2	
+init 7	
+init 1	
+init 0	(Ans)
+init 5	
+19. Missing files don’t have their original file names, instead they are named with their _____ number?	
+inode	(Ans)
+device	
+UID	
+GID	
+20. Which of the following is true about the fsck command?	
+It can only be used to fix ext3 filesystems	
+It is designed to be executed on currently used filesystems	
+It should only be executed on mounted filesystems	
+It should only be executed on unmounted filesystems	(Ans)
+It can only be used to fix ext2 filesystems	
+21. All RPM package management commands must be run as the root user. True or False?	
+TRUE	(Ans)
+FALSE	
+22. How can you remove a package using an rpm command?	
+rpm -x	
+rpm -r	
+rpm -e	(Ans)
+rpm -d	
+23. The rpm2cpio command can be used to:	
+(choose two)	
+Build a binary .rpm file from a source .src.rpm file	
+List the content of a .rpm file	(Ans)
+Create a new .rpm file	
+Extract files from a .rpm file	(Ans)
+24. If a library is not accessible due to an error, the ldd would report which error message?	
+error: lib not configured	
+not found	(Ans)
+library missing	
+lib missing	
+25. Which of the following are benefits of a shared library:	
+(choose two)	
+Programs run faster	
+Programs use a more consistent base of code	(Ans)
+Programs can be smaller	(Ans)
+Programs run slower	
+26. Which of the following will find and load shared libraries when a program is executed?	
+The kernel	
+The dynamic linker	(Ans)
+The init process	
+The scheduler	
+27. a hypervisor allows:(choose two)	
+system calls to be directly executed by physical hardware	
+application software to run without an operating system	
+an operating system to be installed on virtual hardware	(Ans)
+virtual resources to be accessed by operating systems and application software	(Ans)
+28. Container technology allows system designers to bypass traditional operating systems. True or False?	
+TRUE	(Ans)
+FALSE	
+29. Virtualization software comes in both paid and open source variants:True or False?	
+TRUE	(Ans)
+FALSE	
+30. Which of the following is not an advantage of GRUB 2 over GRUB Legacy?	
+Non-ASCII character support	
+Ability to work with architectures that don’t have a PC BIOS	
+Ability to boot from partitions inside of Logical Volume Management (LVM) or RAID devices	
+Dynamically loaded modules	
+Command-line interface	(Ans)
+31. Integrated peripherals are embedded into the _______ of a system:	
+Motherboard	(Ans)
+Bootloader	
+RAM	
+CPU	
+32. Which of the following are considered replacements for the traditional init process? (choose two)	
+Starter	
+Upstart	(Ans)
+Systemd	(Ans)
+Sysinit	
+33. The systemd equivalent of runlevels are called?	
+initstages	
+bootlevels	
+BIOS	
+targets	(Ans)
+34. What is the real location of the GRUB Legacy configuration file?	
+/etc/grub/grub.conf	
+/boot/grub/grub.conf	(Ans)
+/boot/grub.conf	
+/var/local/grub.conf	
+35. Which command is useful for booting a corrupted disk drive?	
+grub-install	
+grub-mkconfig	(Ans)
+update-grub	
+grub-set-default	
+36. Which of the following commands can be used to halt the system? (choose two)	
+halt	(Ans)
+shutdown	
+reboot	
+poweroff	(Ans)
+37. Which of the following commands is used as a traditional replacement for the init process?	
+iostat	
+systemctl	(Ans)
+sudo	
+ioctl	
+38. Which of the following commands is used to view the status of all services?	
+systemctl -l	
+systemctl --Z	
+systemctl --l	
+systemctl --all	(Ans)
+39. Which runlevel number defines halting the system?	
+0	(Ans)
+3	
+4	
+2	
+6	
+5	
+1	
+40. What directory contains information about symbolic links that enable services?	
+/proc/acpi	
+/etc/rc.d	
+/usr/lib/systemd	(Ans)
+/etc/init.d/httpd	
+41. What option to the mkfs command allows you to specify the type of filesystem to create?	
+-f	
+-fs	
+-fstype	
+-t	(Ans)
+42. Which command is used to create a logical volume?	
+create	
+lvadd	
+lvcreate	(Ans)
+createlv	
+43. Which command is used to create a physical volume?	
+createpv	
+create	
+pvadd	
+pvcreate	(Ans)
+44. Which program will non-destructively resize a partition and its installed filesystem?	
+fdisk	
+parted	(Ans)
+lvcreate	
+sgdisk	
+45. Which command will create disk labels on an ext3 filesystem?	
+label	
+elabel	
+ext3label	
+e2label	(Ans)
+46. Which command will describe the mount options available for different filesystems?	
+mount --list	
+mount -a	
+mount --options	
+man mount	(Ans)
+47. Which file provides persistent mapping of block devices to mount points?	
+/etc/blk.id	
+/etc/fstable	
+/etc/blk.map	
+/etc/fstab	(Ans)
+48. You wish to see an output of the devices on your system that are block-based. Which of the following will list them out?	
+enum-disk	
+lsblk	(Ans)
+ls -ld	
+block-id	
+49. What is the primary configuration file for yum?	
+/etc/yum/main.conf	
+/etc/yum.d/yum.conf	
+/etc/yum.conf	(Ans)
+/etc/yum/yum.conf	
+50. Which command will show the dependencies of an RPM package?	
+rpm -qpR	(Ans)
+yum requires	
+yum provides	
+rpm -qpd	
+51. In which file are repositories stored for Debian package management?	
+/etc/apt/source.repo	
+/etc/repo.list	
+/etc/apt/sources.list	(Ans)
+/etc/apt/repo.list	
+52. Which command may be used to get a list of the installed Debian packages?	
+apt-get list	
+apt-get show	
+dpkg -L	
+dpkg -l	(Ans)
+53. Which command will remove all files that belong to a Debian package?	
+apt-get purge	(Ans)
+apt-get uninstall	
+apt-get remove	
+apt-get erase	
+54. Which command will update the list of available packages for APT?	
+apt-get upgrade	
+apt-get update	(Ans)
+apt-cache update	
+apt-cache upgrade	
+55. Which utility can automate changes needed for a base virtual machine image?	
+cloud-init	(Ans)
+minions	
+lscpu	
+KVM	

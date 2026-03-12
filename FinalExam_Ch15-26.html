@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Quiz Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card" id="start-box">
+        <h1>測驗準備</h1>
+        <div class="settings">
+            <label class="switch-container">
+                <input type="checkbox" id="shuffle-toggle">
+                隨機題目順序
+            </label>
+        </div>
+        <button class="primary-btn" onclick="startQuiz()">開始測驗</button>
+    </div>
+
+    <div class="card hidden" id="quiz-box">
+        <div class="progress-info">
+            <span id="progress-text"></span>
+        </div>
+        <div id="question-area">
+            <h2 id="question-text"></h2>
+            <div id="options-container" class="options-grid"></div>
+            <button id="submit-btn" class="primary-btn submit-btn" onclick="handleSubmit()">確認送出</button>
+        </div>
+    </div>
+
+    <div class="card hidden" id="result-box">
+        <h1>測試完成</h1>
+        <p id="score-summary"></p>
+        <div id="wrong-list">
+            <h3>錯題回顧：</h3>
+            <ul id="wrong-answers-ul"></ul>
+        </div>
+        <button onclick="location.reload()" class="primary-btn">返回主選單</button>
+    </div>
+
+    <script src="FinalExam_Ch15-26_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

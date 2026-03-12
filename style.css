@@ -1,0 +1,94 @@
+:root {
+    --primary: #4a90e2;
+    --error: #ff5e5e;
+    --success: #2ecc71;
+    --bg: #f0f2f5;
+}
+
+body {
+    font-family: -apple-system, system-ui, sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    background: white;
+    width: 90%;
+    max-width: 450px;
+    padding: 25px;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.hidden { display: none; }
+
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #edf2f7;
+    border-radius: 14px;
+    background: white;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    outline: none;
+}
+
+/* 選中狀態 */
+.option-btn.selected {
+    border-color: var(--primary);
+    background-color: #f0f7ff;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn {
+    margin-top: 10px;
+    background: #333;
+}
+
+/* 震動動畫 */
+.shake {
+    animation: shake-anim 0.4s ease-in-out;
+}
+
+@keyframes shake-anim {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-8px); }
+    40%, 80% { transform: translateX(8px); }
+}
+
+.progress-info { color: #888; font-weight: bold; margin-bottom: 10px; }
+
+.wrong-item {
+    text-align: left;
+    background: #fffafa;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid var(--error);
+}
