@@ -379,17 +379,17 @@ const examination_question =[
     "ans": ["Both the user owner and group owners"]
   },
   {
-    "question": "For rwxr-x--x permission set, the highlighted permissions belong to:",
+    "question": "For rwxr-x<span style='background:yellow;'>--x</span> permission set, the highlighted permissions belong to:",
     "option": ["The user owner and group owner of the file", "The group owner of the file", "All users besides the user owner and group owner", "The user owner of the file"],
     "ans": ["All users besides the user owner and group owner"]
   },
   {
-    "question": "For the rwxr-x--x permission set, the highlighted permissions belong to:",
+    "question": "For the rwx<span style='background:yellow;'>r-x</span>--x permission set, the highlighted permissions belong to:",
     "option": ["The user owner and group owner of the file", "The user owner of the file", "All users besides the user owner and group owner", "The group owner of the file"],
     "ans": ["The group owner of the file"]
   },
   {
-    "question": "For the rwxr-x--x permission set, the highlighted permissions belong to:",
+    "question": "For the <span style='background:yellow;'>rwx</span>r-x--x permission set, the highlighted permissions belong to:",
     "option": ["The group owner of the file", "All users besides the user owner and group owner", "The user owner of the file", "The user owner and group owner of the file"],
     "ans": ["The user owner of the file"]
   },
