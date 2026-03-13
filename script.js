@@ -31,7 +31,7 @@ function loadQuestion() {
     currentSelected = []; // 重置選中項
     
     document.getElementById('progress-text').innerText = `第 ${currentIndex + 1} 題 / 共 ${quizData.length} 題`;
-    document.getElementById('question-text').innerText = current.question;
+    document.getElementById('question-text').innerHTML = current.question;
     
     optionsContainer.innerHTML = '';
     
