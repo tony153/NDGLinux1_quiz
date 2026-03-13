@@ -100,8 +100,9 @@ function showResults() {
     quizBox.classList.add('hidden');
     resultBox.classList.remove('hidden');
     
-    document.getElementById('score-summary').innerText = 
-        `測驗結束！總題數：${quizData.length}，答錯題數：${wrongAnswers.length}`;
+    document.getElementById('score-summary').innerHTML = 
+        `測驗結束！總題數：${quizData.length}，答錯題數：${wrongAnswers.length}<br><br>
+        <div style="font-weight: bold; font-size: 2em; color:var(--primary);">分數: ${((quizData.length - wrongAnswers.length) / quizData.length * 100).toFixed(2)}</div>`;
     
     const ul = document.getElementById('wrong-answers-ul');
     ul.innerHTML = '';
